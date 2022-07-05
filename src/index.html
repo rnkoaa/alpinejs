@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../dist/output.css">
+	<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+	<!-- <script src="../node_modules/alpinejs/dist/cdn.min.js"></script> -->
+	<title>Learning about alpine js</title>
+</head>
+<body>
+	
+	<h1 class="text-3l pt-4 mt-4 flex">
+		Hello Tailwind css
+	</h1>
+
+	<div x-data="{message: 'I love you'}" x-text="message"></div>
+
+	<div x-data="
+	{
+		count: 0,
+		decrement() {
+			console.log(`Decrement Count called: ${count}`)
+			if(count > 0) {
+				count--
+			}
+		},
+		increment(){			
+			console.log(`Increment Count called: ${count}`)
+			if(count  <= 100) {
+				count++
+			}
+		}
+	}
+	">
+		<span x-text="count"> counter</span>
+		<button x-on:click="increment()"> Increment </button>
+		<button x-on:click="decrement()"> Decrement </button>
+	</div>
+	
+</body>
+</html>
