@@ -1,0 +1,3 @@
+[submodule "tailwind-dashboard-windster"]
+	path = tailwind-dashboard-windster
+	url = git@github.com:themesberg/tailwind-dashboard-windster.git
